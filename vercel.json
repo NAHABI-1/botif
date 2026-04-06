@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "name": "mt5-dashboard",
+      "rootDirectory": "dashboard",
+      "framework": "vite"
+    }
+  ],
+  "experimentalServices": {
+    "frontend": {
+      "routePrefix": "/"
+    },
+    "api": {
+      "entrypoint": "services/api",
+      "routePrefix": "/_/api"
+    },
+    "engine": {
+      "entrypoint": "services/engine",
+      "routePrefix": "/_/engine"
+    },
+    "worker": {
+      "entrypoint": "services/worker",
+      "routePrefix": "/_/worker"
+    }
+  }
+}
