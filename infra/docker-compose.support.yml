@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${MT5_DB_NAME:-mt5_platform}
+      POSTGRES_USER: ${MT5_DB_USER:-mt5}
+      POSTGRES_PASSWORD: ${MT5_DB_PASSWORD:-change-me}
+    ports:
+      - "5432:5432"
+    volumes:
+      - mt5-postgres-data:/var/lib/postgresql/data
+
+volumes:
+  mt5-postgres-data:

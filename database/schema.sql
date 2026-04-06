@@ -1,0 +1,2 @@
+-- Placeholder SQL schema export.
+-- Managed by SQLAlchemy models and Alembic migrations.

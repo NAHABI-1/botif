@@ -1,0 +1,32 @@
+[tool.black]
+line-length = 120
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["services/engine/src", "services/worker/src", "services/api/src", "database/src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["mt5_platform_engine", "mt5_platform_worker", "mt5_platform_api", "mt5_platform_db"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+warn_redundant_casts = true
+warn_unreachable = true
+no_implicit_optional = true
+check_untyped_defs = true
+ignore_missing_imports = true
+pretty = true
+show_error_codes = true
+mypy_path = "services/engine/src:services/worker/src:services/api/src:database/src"
+files = [
+  "services/engine/src",
+  "services/worker/src",
+  "services/api/src",
+  "database/src",
+]
